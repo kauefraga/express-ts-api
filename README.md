@@ -34,17 +34,21 @@ Or downloading with yarn? `yarn && yarn dev`
 
 ## 💻 Technologies
 
+- 🔖 [CommitLint](https://commitlint.js.org)
 - 🔥 [CORS](https://www.npmjs.com/package/cors) 🔥
 - 🤫 [Dotenv](https://www.npmjs.com/package/dotenv)
+- 💄 [ESLint](https://eslint.org)
+- ⚗️ [Jest](https://jestjs.io)
 - 🔮 [Express](https://expressjs.com)
-- 🧑💻 Developed on [Typescript](https://www.typescriptlang.org) + [TS-Node-Dev](https://www.npmjs.com/package/ts-node-dev)
+- 🗺️ Path mapping with [Tsconfig-paths](https://www.npmjs.com/package/tsconfig-paths)
+- 🧑‍💻 Developed on [Typescript](https://www.typescriptlang.org) + [TS-Node-Dev](https://www.npmjs.com/package/ts-node-dev)
 
 ## 📝 License
 
 This project is licensed under the MIT License - See the [LICENSE](https://github.com/kauefraga/server-structure/blob/main/LICENSE) for more information.
 
 ---
-<div align="center" display="flex">
+<div align="center">
   <img alt="Built with love" src="https://forthebadge.com/images/badges/built-with-love.svg">
   <img alt="Powered by coffee" src="https://forthebadge.com/images/badges/powered-by-coffee.svg">
 </div>
