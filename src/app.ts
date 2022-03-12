@@ -1,9 +1,8 @@
 import cors from 'cors'
 import express, { Application } from 'express'
-import addApiRoutes from './api/routes'
+import addApiRoutes from '@routes/index'
 
-
-function buildApp(): Application {
+function buildApp (): Application {
   const app = express()
 
   app.use(cors())

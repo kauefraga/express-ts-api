@@ -1,4 +1,4 @@
-import HelloController from '../controllers/hello'
+import HelloController from '@controllers/hello'
 import { Router } from 'express'
 
 const router = Router()

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 
 class HelloController {
-  static sayHello(
+  static sayHello (
     request: Request,
     response: Response
   ) {
