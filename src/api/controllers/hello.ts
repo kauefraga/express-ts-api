@@ -6,7 +6,8 @@ class HelloController {
     response: Response
   ) {
     return response.json({
-      message: 'Hello! 👋'
+      message: 'Hello! 👋',
+      now: new Date()
     })
   }
 }
