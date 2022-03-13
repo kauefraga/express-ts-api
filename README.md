@@ -32,16 +32,27 @@ npm run dev
 ```
 Or downloading with yarn? `yarn && yarn dev`
 
+## ✨ Features
+
+- **Architecture**: [Monolithic](https://en.wikipedia.org/wiki/Monolithic_application)
+- **Linters**: Code and commit (Standard style guide)
+- Ready to create tests
+- CORS and Dotenv setup
+- Nice developer experience with **Typescript** and **Path Mapping**
+
+- [] Easy to deploy
+
 ## 💻 Technologies
 
 - 🔖 [CommitLint](https://commitlint.js.org)
-- 🔥 [CORS](https://www.npmjs.com/package/cors) 🔥
-- 🤫 [Dotenv](https://www.npmjs.com/package/dotenv)
+- 🔥 [CORS](https://npmjs.com/package/cors) 🔥
+- 🤫 [Dotenv](https://npmjs.com/package/dotenv)
 - 💄 [ESLint](https://eslint.org)
-- ⚗️ [Jest](https://jestjs.io)
 - 🔮 [Express](https://expressjs.com)
-- 🗺️ Path mapping with [Tsconfig-paths](https://www.npmjs.com/package/tsconfig-paths)
-- 🧑‍💻 Developed on [Typescript](https://www.typescriptlang.org) + [TS-Node-Dev](https://www.npmjs.com/package/ts-node-dev)
+- ⚗️ [Jest](https://jestjs.io)
+- 🪄 ORM/ODM with [Prisma](https://prisma.io)
+- 🗺️ Path mapping with [Tsconfig-paths](https://npmjs.com/package/tsconfig-paths)
+- 🧑‍💻 Developed on [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npmjs.com/package/ts-node-dev)
 
 ## 📝 License
 
