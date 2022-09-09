@@ -1,0 +1,46 @@
+{
+  "name": "server-structure",
+  "author": {
+    "name": "Kauê Fraga Rodrigues",
+    "email": "kauefragarodrigues456@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kauefraga/server-structure"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && echo 'run npm start'",
+    "start": "node dist/server.js",
+    "dev": "tsnd -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
+    "test": "jest",
+    "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
+    "prisma:migrations": "prisma migrate dev",
+    "prisma:introspect": "prisma db pull",
+    "lint:commit": "commitlint -E GIT_PARAMS"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.21",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.13.0",
+    "typescript": "*"
+  },
+  "engines": {
+    "node": ">=16.17.x",
+    "pnpm": ">=7.9.x"
+  }
+}
