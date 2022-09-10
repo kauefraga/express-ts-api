@@ -39,22 +39,52 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm dev`
 ## ✨ Features
 
 - **Architecture**: [Monolithic](https://en.wikipedia.org/wiki/Monolithic_application)
-- **Linters**: Commit (Conventional config)
+- **Linters**: Prettier
 - Ready to create tests
 - CORS and Dotenv setup
 - Nice developer experience with **Typescript** and **Path Mapping**
-
-- [] Easy to deploy
+- API production-quality with:
+  - ISO 8601 (Date format)
+  - Version like _`GET /v1`_
+  - Request limitations
 
 ## 💻 Technologies
 
-- 🔖 [CommitLint](https://commitlint.js.org)
-- 🔥 [CORS](https://npmjs.com/package/cors) 🔥
+- 🔥 [CORS](https://npmjs.com/package/cors)
+  > Required when we need to control who can access our endpoints
 - 🤫 [Dotenv](https://npmjs.com/package/dotenv)
+  > We must hide our secret keys, with dotenv we can load env variables into `process.env` more easily
 - 🔮 [Express](https://expressjs.com)
-- ⚗️ [Jest](https://jestjs.io)
+  > "Fast, minimalist web framework for Nodejs..."
+- ⚗️ Running tests on [Jest](https://jestjs.io) + [SWC](https://swc.rs)
+  > Jest is a simple testing framework for JavaScript
+- 💄 Code styling with [Prettier](https://prettier.io)
+  > "...opinionated code formatter"
 - 🗺️ Path mapping with [Tsconfig-paths](https://npmjs.com/package/tsconfig-paths)
+  > Add import path alias making importations shorter (i.e. `../../../` to `@something/`)
 - 🧑‍💻 Developed on [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npmjs.com/package/ts-node-dev)
+  > Improve dev experience by adding type safety
+
+## 🗃️ Project tree view
+
+```bash
+# last change - 22:56 09/09/2022
+.
+├─ __tests__
+├─ LICENSE
+├─ package.json
+├─ README.md
+├─ src
+│  ├─ controllers
+│  ├─ middlewares
+│  ├─ types
+│  ├─ app.ts
+│  ├─ routes.ts
+│  ├─ server.ts
+├─ .prettierrc.json
+├─ jest.config.ts
+└─ tsconfig.json
+```
 
 ## 📝 License
 
