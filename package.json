@@ -10,16 +10,16 @@
     "url": "https://github.com/kauefraga/server-structure"
   },
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/src/server.js",
   "scripts": {
-    "build": "tsc && echo 'run npm start'",
-    "start": "node dist/server.js",
+    "start": "ts-node -r tsconfig-paths/register .",
     "dev": "tsnd -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
     "test": "jest",
     "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
     "prisma:migrations": "prisma migrate dev",
     "prisma:introspect": "prisma db pull",
-    "lint:commit": "commitlint -E GIT_PARAMS"
+    "lint:commit": "commitlint -E GIT_PARAMS",
+    "lint": "prettier --check src/**/*.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -38,10 +38,12 @@
     "@types/supertest": "^2.0.12",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
+    "prettier": "^2.7.1",
     "supertest": "^6.2.4",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^1.1.8",
     "tsconfig-paths": "^3.13.0",
+    "tscpaths": "^0.0.9",
     "typescript": "*"
   },
   "engines": {
