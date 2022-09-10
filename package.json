@@ -15,7 +15,6 @@
     "start": "ts-node -r tsconfig-paths/register .",
     "dev": "tsnd -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
     "test": "jest",
-    "lint:commit": "commitlint -E GIT_PARAMS",
     "lint": "prettier --check src/**/*.ts"
   },
   "dependencies": {
@@ -25,8 +24,6 @@
     "express-rate-limit": "^6.6.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
-    "@commitlint/config-conventional": "^16.2.1",
     "@swc/core": "^1.2.249",
     "@swc/jest": "^0.2.22",
     "@types/cors": "^2.8.12",
@@ -34,7 +31,6 @@
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.21",
     "@types/supertest": "^2.0.12",
-    "husky": "^7.0.4",
     "jest": "^27.5.1",
     "prettier": "^2.7.1",
     "supertest": "^6.2.4",
