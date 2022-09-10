@@ -13,7 +13,7 @@
   "main": "dist/src/server.js",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register .",
-    "dev": "tsnd -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
+    "dev": "NODE_ENV=development tsnd -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
     "test": "jest",
     "lint": "prettier --check src/**/*.ts"
   },
