@@ -15,9 +15,6 @@
     "start": "ts-node -r tsconfig-paths/register .",
     "dev": "tsnd -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
     "test": "jest",
-    "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
-    "prisma:migrations": "prisma migrate dev",
-    "prisma:introspect": "prisma db pull",
     "lint:commit": "commitlint -E GIT_PARAMS",
     "lint": "prettier --check src/**/*.ts"
   },
