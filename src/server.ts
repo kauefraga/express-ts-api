@@ -1,12 +1,12 @@
-import 'dotenv/config'
-import app from './app'
+import 'dotenv/config';
+import app from './app';
 
-function bootServer (port: number) {
+function bootServer(port: string | number) {
   return app.listen(port, () => {
-    console.log(`[server] running on port ${port}`)
-  })
+    console.log(`[server] running on port http://localhost:${port}`);
+  });
 }
 
-const PORT = 3333
+const PORT = process.env.PORT || 3333;
 
-bootServer(PORT)
+bootServer(PORT);
