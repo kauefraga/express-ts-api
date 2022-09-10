@@ -3,7 +3,9 @@ import app from './app';
 
 function bootServer(port: string | number) {
   return app.listen(port, () => {
-    console.log(`[server] running on port http://localhost:${port}`);
+    console.log(
+      `[server] running on port http://localhost:${port}/v1`
+    );
   });
 }
 
