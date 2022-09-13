@@ -86,6 +86,13 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm dev`
 └─ tsconfig.json
 ```
 
+```bash
+# Available http routes
+GET /v1 -> Hello World
+GET /v1/docs -> Documentation
+POST /v1/users/create <name> -> User
+```
+
 ## 📝 License
 
 This project is licensed under the MIT License - See the [LICENSE](https://github.com/kauefraga/server-structure/blob/main/LICENSE) for more information.
