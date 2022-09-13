@@ -25,6 +25,12 @@ export class DocsController {
             alias: '/api/v1/docs',
             method: 'GET',
           },
+          {
+            url: `${baseUrl}/v1/users/create`,
+            alias: '/api/v1/users/create',
+            method: 'POST',
+            input: 'name <string>',
+          },
         ],
         now: new Date(),
       },
