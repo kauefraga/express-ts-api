@@ -1,14 +1,16 @@
 import cors from 'cors';
 import express, { Application } from 'express';
 import { router } from './routes';
-import { NotFoundMiddleware } from '@middlewares/404';
-import { RequestLimiter } from '@middlewares/RequestLimiter';
+import { NotFoundMiddleware } from './middlewares/404';
+import { RequestLimiter } from './middlewares/RequestLimiter';
 
 function buildApp(): Application {
   const app = express();
 
   app.use(cors());
   app.use(express.json());
+
+  app.disable('x-powered-by');
 
   app.use(RequestLimiter);
 
