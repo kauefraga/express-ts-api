@@ -1,4 +1,3 @@
-// I choose `User` because it's generic
 import cuid from 'cuid';
 
 export interface UserProps {
@@ -16,17 +15,11 @@ export class User {
     }
 
     if (!this.props.name) {
-      throw {
-        name: 'Error with name',
-        message: 'You must provide a name',
-      };
+      throw new Error('You must provide a name');
     }
 
     if (this.props.createdAt > new Date()) {
-      throw {
-        name: 'Error with createdAt',
-        message: 'You must provide a valid date',
-      };
+      throw new Error('You must provide a valid date');
     }
   }
 

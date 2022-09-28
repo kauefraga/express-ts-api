@@ -1,9 +1,6 @@
 {
   "name": "server-structure",
-  "author": {
-    "name": "Kauê Fraga Rodrigues",
-    "email": "kauefragarodrigues456@gmail.com"
-  },
+  "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -13,7 +10,7 @@
   "main": "dist/src/server.js",
   "scripts": {
     "start": "node .",
-    "dev": "NODE_ENV=development tsnd -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
+    "dev": "NODE_ENV=development tsnd --respawn --transpile-only src/http/server.ts",
     "test": "vitest",
     "lint": "eslint"
   },
