@@ -56,12 +56,10 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm dev`
   > We must hide our secret keys, with dotenv we can load env variables into `process.env` more easily
 - 🔮 [Express](https://expressjs.com)
   > "Fast, minimalist web framework for Nodejs..."
-- ⚗️ Running tests on [Jest](https://jestjs.io) + [SWC](https://swc.rs)
-  > Jest is a simple testing framework for JavaScript
-- 💄 Code styling with [Prettier](https://prettier.io)
-  > "...opinionated code formatter"
-- 🗺️ Path mapping with [Tsconfig-paths](https://npmjs.com/package/tsconfig-paths)
-  > Add import path alias making importations shorter (i.e. `../../../` to `@something/`)
+- ⚗️ Running tests on [Vitest](https://vitest.dev)
+  > Implements Jest but with its own ESbuider (out of box typescript, esmodules...)
+- 💄 Code ruling with [Eslint](https://eslint.org)
+  > "...statically analyzes your code to quickly find problems"
 - 🧑‍💻 Developed on [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npmjs.com/package/ts-node-dev)
   > Improve dev experience by adding type safety
 
@@ -75,14 +73,17 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm dev`
 ├─ package.json
 ├─ README.md
 ├─ src
-│  ├─ controllers
-│  ├─ middlewares
-│  ├─ types
-│  ├─ app.ts
-│  ├─ routes.ts
-│  ├─ server.ts
-├─ .prettierrc.json
-├─ jest.config.ts
+│  ├─ core
+│  ├─ http
+│    ├─ controllers
+│    ├─ middlewares
+│    ├─ types
+│    ├─ app.ts
+│    ├─ routes.ts
+│    ├─ server.ts
+│  ├─ infra
+├─ .eslintrc.json
+├─ vitest.config.ts
 └─ tsconfig.json
 ```
 
