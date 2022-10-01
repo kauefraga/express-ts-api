@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
-import { User } from '../../../core/entities/User';
+import { User } from '../../../core/entities/user';
+import { inMemoryUsersDatabase } from '../../../infra/db';
 import { ApiResponse } from '../../types/ApiResponse';
 
-export function CreateUserController(
+export async function CreateUserController(
   request: Request<unknown, unknown, { name: string }>,
   response: Response<ApiResponse>,
 ) {
@@ -11,8 +12,9 @@ export function CreateUserController(
   try {
     const user = new User({
       name,
-      createdAt: new Date(),
     });
+
+    await inMemoryUsersDatabase.create(user);
 
     return response.status(201).json({
       success: true,
@@ -20,7 +22,6 @@ export function CreateUserController(
         user: {
           id: user.id,
           name: user.name,
-          createdAt: user.createdAt,
         },
         now: new Date(),
       },

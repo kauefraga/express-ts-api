@@ -5,11 +5,11 @@ import { CreateUserController } from './controllers/users/create';
 
 const router = Router();
 
-router.get('/v1', HelloController.handler);
+router.get('/v1', HelloController);
 
 router.get(
   '/v1/docs',
-  DocsController.handler,
+  DocsController,
 );
 
 router.post(
