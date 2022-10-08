@@ -60,9 +60,14 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
   > "Fast, minimalist web framework for Nodejs..."
 - ⚗️ Running tests on [Vitest](https://vitest.dev)
   > Implements Jest but with its own ESbuider (out of box typescript, esmodules...)
+<<<<<<< HEAD
 - 💄 Code styling with [Eslint](https://eslint.org)
   - https://www.npmjs.com/package/eslint-config-airbnb-base
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
+=======
+- 💄 Code ruling with [Eslint](https://eslint.org)
+  > "...statically analyzes your code to quickly find problems"
+>>>>>>> 07fb3cf7c0ada1993f416e9049a375cbcf4b103f
 - 🧑‍💻 Developed on [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npmjs.com/package/ts-node-dev)
   > Improve dev experience by adding type safety
 
@@ -72,8 +77,11 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
 .
 ├─ src
 │  ├─ core
+<<<<<<< HEAD
 │    ├─ entities
 │    ├─ repositories
+=======
+>>>>>>> 07fb3cf7c0ada1993f416e9049a375cbcf4b103f
 │  ├─ http
 │    ├─ controllers
 │    ├─ middlewares
@@ -82,9 +90,14 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
 │    ├─ routes.ts
 │    ├─ server.ts
 │  ├─ infra
+<<<<<<< HEAD
 │    ├─ db.ts # in memory
 ├─ .eslintrc.json
 ├─ vite.config.ts
+=======
+├─ .eslintrc.json
+├─ vitest.config.ts
+>>>>>>> 07fb3cf7c0ada1993f416e9049a375cbcf4b103f
 └─ tsconfig.json
 ```
 
