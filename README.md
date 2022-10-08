@@ -1,4 +1,4 @@
-<h1 align="center">Server "boilerplate"</h1>
+<h1 align="center">Server Structure</h1>
 
 <p align="center">
   <img
@@ -21,28 +21,30 @@
   />
 </p>
 
-<h4 align="center">I'm building a "template" for server with express</h4>
+<h4 align="center">I'm building a "template" for server with Expressjs framework</h4>
 
 ## ⬇️ How to download
 
 ```bash
-git clone https://github.com/kauefraga/server-boilerplate.git
-cd server-boilerplate
+git clone https://github.com/kauefraga/server-structure.git
+cd server-structure
+
 npm install
-npm run dev
+npm run build
+npm run start
 ```
 
-Or downloading with yarn? `yarn && yarn dev`
+Or downloading with yarn? `yarn && yarn build && yarn start`
 <br/>
-Sincerely, i prefer pnpm so: `pnpm i && pnpm dev`
+Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
 
 ## ✨ Features
 
 - **Architecture**: [Monolithic](https://en.wikipedia.org/wiki/Monolithic_application)
-- **Linters**: Prettier
+- **Linters**: Eslint airbnb typescript
 - Ready to create tests
 - CORS and Dotenv setup
-- Nice developer experience with **Typescript** and **Path Mapping**
+- Nice developer experience with **Typescript**
 - API production-quality with:
   - ISO 8601 (Date format)
   - Version like _`GET /v1`_
@@ -56,40 +58,39 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm dev`
   > We must hide our secret keys, with dotenv we can load env variables into `process.env` more easily
 - 🔮 [Express](https://expressjs.com)
   > "Fast, minimalist web framework for Nodejs..."
-- ⚗️ Running tests on [Jest](https://jestjs.io) + [SWC](https://swc.rs)
-  > Jest is a simple testing framework for JavaScript
-- 💄 Code styling with [Prettier](https://prettier.io)
-  > "...opinionated code formatter"
-- 🗺️ Path mapping with [Tsconfig-paths](https://npmjs.com/package/tsconfig-paths)
-  > Add import path alias making importations shorter (i.e. `../../../` to `@something/`)
+- ⚗️ Running tests on [Vitest](https://vitest.dev)
+  > Implements Jest but with its own ESbuider (out of box typescript, esmodules...)
+- 💄 Code styling with [Eslint](https://eslint.org)
+  - https://www.npmjs.com/package/eslint-config-airbnb-base
+  - https://www.npmjs.com/package/eslint-config-airbnb-typescript
 - 🧑‍💻 Developed on [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npmjs.com/package/ts-node-dev)
   > Improve dev experience by adding type safety
 
 ## 🗃️ Project tree view
 
 ```bash
-# last change - 22:56 09/09/2022
 .
-├─ __tests__
-├─ LICENSE
-├─ package.json
-├─ README.md
 ├─ src
-│  ├─ controllers
-│  ├─ middlewares
-│  ├─ types
-│  ├─ app.ts
-│  ├─ routes.ts
-│  ├─ server.ts
-├─ .prettierrc.json
-├─ jest.config.ts
+│  ├─ core
+│    ├─ entities
+│    ├─ repositories
+│  ├─ http
+│    ├─ controllers
+│    ├─ middlewares
+│    ├─ types
+│    ├─ app.ts
+│    ├─ routes.ts
+│    ├─ server.ts
+│  ├─ infra
+│    ├─ db.ts # in memory
+├─ .eslintrc.json
+├─ vite.config.ts
 └─ tsconfig.json
 ```
 
 ```bash
 # Available http routes
 GET /v1 -> Hello World
-GET /v1/docs -> Documentation
 POST /v1/users/create <name> -> User
 ```
 
