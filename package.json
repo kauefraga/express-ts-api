@@ -1,15 +1,16 @@
 {
   "name": "server-structure",
+  "private": true,
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/kauefraga/server-structure"
   },
-  "version": "1.0.0",
-  "main": "dist/src/server.js",
+  "main": "dist/http/server.js",
   "scripts": {
-    "start": "node .",
+    "build": "tsc",
+    "start": "NODE_ENV=production && node .",
     "dev": "NODE_ENV=development tsnd --respawn --transpile-only src/http/server.ts",
     "test": "vitest",
     "lint": "eslint"
