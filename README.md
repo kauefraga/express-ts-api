@@ -1,102 +1,92 @@
-<h1 align="center">Server Structure</h1>
+<div align="center">
+  <h1 align="center">Express Typescript API</h1>
 
-<p align="center">
-  <img
-    alt="GitHub top language"
-    src="https://img.shields.io/github/languages/top/kauefraga/server-structure.svg"
-  />
-  <img
-    alt="Repository size"
-    src="https://img.shields.io/github/repo-size/kauefraga/server-structure.svg"
-  />
-  <a href="https://github.com/kauefraga/server-structure/commits/main">
+  <p>
+    <strong>
+      🍃 A simple Expressjs boilerplate with Typescript. Ready for your APIs! 🍃
+    </strong>
+  </p>
+
+  <p>
     <img
-      alt="GitHub last commit"
-      src="https://img.shields.io/github/last-commit/kauefraga/server-structure.svg"
+      alt="GitHub top language"
+      src="https://img.shields.io/github/languages/top/kauefraga/express-ts-api.svg"
     />
-  </a>
-  <img
-    alt="GitHub LICENSE"
-    src="https://img.shields.io/github/license/kauefraga/server-structure.svg"
-  />
-</p>
-
-<h4 align="center">I'm building a "template" for server with Expressjs framework</h4>
-
-## ⬇️ How to download
-
-```bash
-git clone https://github.com/kauefraga/server-structure.git
-cd server-structure
-
-npm install
-npm run build
-npm run start
-```
-
-Or downloading with yarn? `yarn && yarn build && yarn start`
-<br/>
-Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
+    <img
+      alt="Repository size"
+      src="https://img.shields.io/github/repo-size/kauefraga/express-ts-api.svg"
+    />
+    <a href="https://github.com/kauefraga/express-ts-api/commits/main">
+      <img
+        alt="GitHub last commit"
+        src="https://img.shields.io/github/last-commit/kauefraga/express-ts-api.svg"
+      />
+    </a>
+    <img
+      alt="GitHub LICENSE"
+      src="https://img.shields.io/github/license/kauefraga/express-ts-api.svg"
+    />
+  </p>
+</div>
 
 ## ✨ Features
 
-- **Architecture**: [Monolithic](https://en.wikipedia.org/wiki/Monolithic_application)
-- **Linters**: Eslint airbnb typescript
-- Ready to create tests
-- CORS and Dotenv setup
-- Nice developer experience with **Typescript**
-- API production-quality with:
-  - ISO 8601 (Date format)
-  - Version like _`GET /v1`_
-  - Request limitations
+- **Boilerplate**: Ready for use! Just install it and code!!
+- **Architecture**: [Monolithic](https://en.wikipedia.org/wiki/monolithic_application).
+- **Linting**: We are using the [Airbnb Style Guide](https://www.npmjs.com/package/eslint-config-airbnb-typescript) to Typescript.
+- **Nice Developer Experience**: code with typescript while reloading with ts-node-dev.
+- **API production-quality**:
+  - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) configured and Dotenv out of the box.
+  - Vitest set up as our test runner.
+  - [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) (Date format).
+  - Simple versioning implemented (`/v1/examples...`).
+  - [Mitigation of DDoS attacks](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack) using request limitations.
 
-## 💻 Technologies
+## ⬇️ How to download and use it
 
-- 🔥 [CORS](https://npmjs.com/package/cors)
-  > Required when we need to control who can access our endpoints
-- 🤫 [Dotenv](https://npmjs.com/package/dotenv)
-  > We must hide our secret keys, with dotenv we can load env variables into `process.env` more easily
-- 🔮 [Express](https://expressjs.com)
-  > "Fast, minimalist web framework for Nodejs..."
-- ⚗️ Running tests on [Vitest](https://vitest.dev)
-  > Implements Jest but with its own ESbuider (out of box typescript, esmodules...)
+1. Clone the repository and change the name
+2. Copy the environment variables
+3. Install the dependencies
+4. Build and start
+
+```bash
+git clone https://github.com/kauefraga/express-ts-api.git {your-project-name}
+cd {your-project-name}
+
+cp .env.example .env
+
+npm install
+
+npm run build
+npm run start
+```
+We are using [PNPM](https://pnpm.io) however feel free to change it to one of your preference.
+
+## 🛠 Technologies
+
+- 🔥 [CORS](https://npm.im/cors) - Required when we need to control who can access our endpoints.
+- 🤫 [Dotenv](https://npm.im/dotenv) - We must hide our secret keys, with dotenv we can load env variables into `process.env` more easily.
+- 🔮 [Express](https://expressjs.com) - "Fast, minimalist web framework for Nodejs..."
+- 🚓 [Express Rate Limit](https://npm.im/express-rate-limit) - Basic rate-limiting middleware for Express.
+- ⚗️ [Vitest](https://vitest.dev) - Implements Jest but with its own ESbuider (out of box typescript, esmodules...).
 - 💄 Code styling with [Eslint](https://eslint.org)
   - https://www.npmjs.com/package/eslint-config-airbnb-base
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
-- 🧑‍💻 Developed on [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npmjs.com/package/ts-node-dev)
-  > Improve dev experience by adding type safety
+- 🧑‍💻 [Typescript](https://typescriptlang.org) + [TS Node Dev](https://npm.im/ts-node-dev)
 
-## 🗃️ Project tree view
-
-```bash
-.
-├─ src
-│  ├─ core
-│    ├─ entities
-│    ├─ repositories
-│  ├─ http
-│    ├─ controllers
-│    ├─ middlewares
-│    ├─ types
-│    ├─ app.ts
-│    ├─ routes.ts
-│    ├─ server.ts
-│  ├─ infra
-│    ├─ db.ts # in memory
-├─ .eslintrc.json
-├─ vite.config.ts
-└─ tsconfig.json
-```
+# 🗺 Routes View
 
 ```bash
-# Available http routes
-GET /v1 -> Hello World
-POST /v1/users/create <name> -> User
+# Returns Hello World
+GET /v1
+
+# Returns an User
+POST /v1/users/create <name>
 ```
 
 ## 📝 License
 
-This project is licensed under the MIT License - See the [LICENSE](https://github.com/kauefraga/server-structure/blob/main/LICENSE) for more information.
+This project is licensed under the MIT License - See the [LICENSE](https://github.com/kauefraga/express-ts-api/blob/main/LICENSE) for more information.
 
 ---
 
