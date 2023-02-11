@@ -1,12 +1,9 @@
 {
-  "name": "server-structure",
+  "name": "express-ts-api",
   "private": true,
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kauefraga/server-structure"
-  },
+  "repository": "https://github.com/kauefraga/express-ts-api.git",
   "main": "dist/http/server.js",
   "scripts": {
     "build": "tsc",
