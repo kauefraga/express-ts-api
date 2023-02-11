@@ -5,7 +5,7 @@ export async function HelloController(
   _: Request,
   response: Response<ApiResponse>,
 ) {
-  return response.status(200).json({
+  return response.json({
     success: true,
     data: {
       message: 'Hello! 👋',

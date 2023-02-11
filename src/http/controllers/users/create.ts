@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { User } from '../../../core/entities/user';
-import { inMemoryUsersDatabase } from '../../../infra/db';
 import { ApiResponse } from '../../types/ApiResponse';
+import { CreateUserUseCase } from '../../../core/usecases/create-user-use-case/create-user';
+import { inMemoryUsersDatabase } from '../../../infra/db';
 
 export async function CreateUserController(
   request: Request<unknown, unknown, { name: string }>,
@@ -9,12 +9,12 @@ export async function CreateUserController(
 ) {
   const { name } = request.body;
 
-  try {
-    const user = new User({
-      name,
-    });
+  const createUserUseCase = new CreateUserUseCase(
+    inMemoryUsersDatabase,
+  );
 
-    await inMemoryUsersDatabase.create(user);
+  try {
+    const user = await createUserUseCase.execute({ name });
 
     return response.status(201).json({
       success: true,
