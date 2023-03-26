@@ -10,7 +10,7 @@
     "start": "NODE_ENV=production && node .",
     "dev": "NODE_ENV=development tsnd --respawn --transpile-only src/http/server.ts",
     "test": "vitest",
-    "lint": "eslint"
+    "lint": "eslint --ext .ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
