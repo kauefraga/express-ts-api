@@ -1,5 +1,7 @@
 <div align="center">
-  <h1 align="center">Express Typescript API</h1>
+  <h1>
+    <code>Express Typescript API</code>
+  </h1>
 
   <p>
     <strong>
@@ -34,7 +36,8 @@
 - **Boilerplate**: Ready for use! Just install it and code!!
 - **Architecture**: [Monolithic](https://en.wikipedia.org/wiki/monolithic_application).
 - **Linting**: We are using the [Airbnb Style Guide](https://www.npmjs.com/package/eslint-config-airbnb-typescript) to Typescript.
-- **Nice Developer Experience**: code with typescript while reloading with ts-node-dev.
+- **Nice Developer Experience**: code with typescript while reloading with tsx.
+- **Fast compilation**: Using esbuild everything becomes faster.
 - **API production-quality**:
   - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) configured and Dotenv out of the box.
   - Vitest set up as our test runner.
@@ -48,6 +51,7 @@
 2. Copy the environment variables
 3. Install the dependencies
 4. Build and start
+5. Now you can access it at http://localhost:3333/v1
 
 ```bash
 git clone https://github.com/kauefraga/express-ts-api.git {your-project-name}
@@ -55,10 +59,12 @@ cd {your-project-name}
 
 cp .env.example .env
 
-npm install
+pnpm i --frozen-lockfile
 
-npm run build
-npm run start
+pnpm build
+pnpm start
+
+curl http://localhost:3333/v1
 ```
 We are using [PNPM](https://pnpm.io) however feel free to change it to one of your preference.
 
@@ -72,7 +78,7 @@ We are using [PNPM](https://pnpm.io) however feel free to change it to one of yo
 - 💄 Code styling with [Eslint](https://eslint.org)
   - https://www.npmjs.com/package/eslint-config-airbnb-base
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
-- 🧑‍💻 [Typescript](https://typescriptlang.org) + [TS Node Dev](https://npm.im/ts-node-dev)
+- 🧑‍💻 [Typescript](https://typescriptlang.org), [tsx](https://www.npmjs.com/package/tsx) and [tsup](https://www.npmjs.com/package/tsup) - Improve the DX by adding type safety and a blazingly fast execution/build provided by esbuild.
 
 # 🗺 Routes View
 
