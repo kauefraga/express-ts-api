@@ -6,9 +6,9 @@
   "repository": "https://github.com/kauefraga/express-ts-api.git",
   "main": "dist/http/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src/",
     "start": "NODE_ENV=production && node .",
-    "dev": "NODE_ENV=development tsnd --respawn --transpile-only src/http/server.ts",
+    "dev": "NODE_ENV=development tsx watch src/http/server.ts",
     "test": "vitest",
     "lint": "eslint --ext .ts"
   },
@@ -22,14 +22,15 @@
   "devDependencies": {
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
-    "@types/node": "^17.0.21",
+    "@types/node": "^17.0.45",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "*",
+    "tsup": "^6.7.0",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.2",
     "vitest": "^0.23.4"
   },
   "engines": {
