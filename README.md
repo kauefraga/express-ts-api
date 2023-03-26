@@ -68,6 +68,24 @@ curl http://localhost:3333/v1
 ```
 We are using [PNPM](https://pnpm.io) however feel free to change it to one of your preference.
 
+## 🐳 How to configure a database
+
+This tutorial will use docker because it is the simplest way to configure a database.
+
+1. Install the [Docker](https://www.docker.com).
+2. Select the database you want to connect to.
+3. Search for an image of that database. (ex.: [redis](https://hub.docker.com/r/bitnami/redis), [postgresql](https://hub.docker.com/r/bitnami/postgresql), [cassandra](https://hub.docker.com/r/bitnami/cassandra)...).
+4. Follow the documentation of the image... However, if it is not available try to create a `docker-compose.yml` like [this one](https://gist.github.com/kauefraga/3074c770c789e9faff46b31ff23e8d8d).
+
+Finally, insert the DATABASE URL and the DATABASE PASSWORD into .env
+```bash
+# Probably the database documentation will has an example of the database string.
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DB"
+
+# We recommend you to change DATABASE for the name of your database.
+DATABASE_PASSWORD="whatever_password_you_want"
+```
+
 ## 🛠 Technologies
 
 - 🔥 [CORS](https://npm.im/cors) - Required when we need to control who can access our endpoints.
@@ -78,6 +96,7 @@ We are using [PNPM](https://pnpm.io) however feel free to change it to one of yo
 - 💄 Code styling with [Eslint](https://eslint.org)
   - https://www.npmjs.com/package/eslint-config-airbnb-base
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
+- 🐳 [Docker](https://www.docker.com) - Use virtualization/containerize to turn your "work on my machine" into "our machine".
 - 🧑‍💻 [Typescript](https://typescriptlang.org), [tsx](https://www.npmjs.com/package/tsx) and [tsup](https://www.npmjs.com/package/tsup) - Improve the DX by adding type safety and a blazingly fast execution/build provided by esbuild.
 
 # 🗺 Routes View
